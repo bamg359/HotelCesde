@@ -1,3 +1,4 @@
+
 import mysql
 from mysql import connector
 
@@ -49,4 +50,3 @@ class Conexion:
             return None
         finally:
             cursor.close()
-
