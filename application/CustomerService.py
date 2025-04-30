@@ -1,6 +1,6 @@
 
 
-from domain.Customer import Customer
+from domain.Huesped import Customer
 from data.CustomerRepository import CustomerRepository
 
 class CustomerService:
