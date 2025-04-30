@@ -1,13 +1,13 @@
 
 
-from domain.Customer import Customer
+from domain.Huesped import Customer
 from application.CustomerService import CustomerService
 from data.CustomerRepository import CustomerRepository
 from data.ConexionMySQL import Conexion
 
 
 class Menu:
-    db = Conexion(host='localhost', port=3307, user='root', password="", database='hotel_cesde')
+    db = Conexion(host='localhost', port=3306, user='root', password=".selh2004", database='myapp')
     db.connect()
     def __init__(self):
         self.customer = Customer(None,None,None,None,None,None,None,None)

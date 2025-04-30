@@ -1,5 +1,5 @@
 
-from domain.Customer import Customer
+from domain.Huesped import Customer
 from data.ConexionMySQL import Conexion
 
 class CustomerRepository:
