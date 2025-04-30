@@ -1,6 +1,7 @@
-import mysql
-from mysql import connector
-
+#import pymysql # type: ignore
+# Removed incorrect import
+#pymysql.install_as_MySQLdb()
+import mysql.connector
 
 
 class Conexion:
@@ -36,7 +37,7 @@ class Conexion:
             print("Conexion cerrada.")
 
     def execute_query(self, query, params=None):
-        cursor = self.connection.cursor(buffered = True)
+        cursor = self.connection.cursor()
         try:
             cursor.execute(query, params)
             self.connection.commit()
@@ -44,7 +45,7 @@ class Conexion:
             if query.lower().startswith('select'):
                 result = cursor.fetchall()
                 return result
-        except mysql.connector.Error as err:
+        except pymysql.MySQLError as err:
             print("Error al ejecutar la consulta", err)
             return None
         finally:
