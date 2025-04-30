@@ -3,7 +3,7 @@
 #pymysql.install_as_MySQLdb()
 import mysql.connector
 
-
+"""
 class Conexion:
 
 
@@ -50,4 +50,4 @@ class Conexion:
             return None
         finally:
             cursor.close()
-
+"""" 
