@@ -26,7 +26,7 @@ class CustomerService:
         occupation = input("Ocupación: ")
 
         customer = Customer(id, name, last_name, email, password, status, origin, occupation)
-        self.customer_repository.create_customer_repository(db, customer)
+        self.customer_repository.create_customer_repository(customer)
 
     def login(self):
         email = input("Ingrese su correo: ")

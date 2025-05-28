@@ -16,7 +16,7 @@ class CustomerRepository:
     def insert_customer(self, customer):
         query = """
             INSERT INTO customer (customer_id, name, last_name, email, password, status, origin , occupation)
-            VALUES (%s,%s, %s, %s, %s, %s, %s, %s)
+            VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
         """
         values = (
             customer.id, customer.name, customer.last_name,
@@ -94,7 +94,7 @@ class CustomerRepository:
         try:
             result = self.conexion.execute_query(query, (email, password))
             if result:
-                return self.from_row(result[0])  # Devuelve el objeto Customer completo
+                return self.from_row(result[0])
             else:
                 return None
         except Exception as e:
